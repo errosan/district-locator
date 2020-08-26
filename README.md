@@ -7,7 +7,7 @@ This is a concept for how to obtain school and legislative districts that serve 
 You can build and run this app on any system that is running NodeJS (Windows, MacOS, etc.). Follow these steps to get, build and run this app.
 
 ```bash
-git clone https://github.com/errosan/DistrictLocator.git
+git clone https://github.com/errosan/district-locator.git
 cd DistrictLocator
 npm install
 npm start
