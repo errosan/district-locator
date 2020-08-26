@@ -8,7 +8,7 @@ You can build and run this app on any system that is running NodeJS (Windows, Ma
 
 ```bash
 git clone https://github.com/errosan/district-locator.git
-cd DistrictLocator
+cd district-locator
 npm install
 npm start
 ```
