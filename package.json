@@ -1,0 +1,23 @@
+{
+  "name": "districtlocator",
+  "version": "0.1.7",
+  "description": "Concept: Locates school districts and legislative districts based on an address",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/errosan/DistrictLocator.git"
+  },
+  "author": "Eric Sandoval",
+  "license": "Unlicense",
+  "dependencies": {
+    "mssql": "^4.3.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}

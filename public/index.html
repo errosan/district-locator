@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-witdh, initial-scale=1">
+	<title>District Locator</title>
+	<link rel="stylesheet" href="css/lib/bootstrap.min.css">
+	<style>
+		#gmap {
+			height: 600px;
+			width: 100%; }
+		#search {
+			width: 78%; }
+		.col-md-7 .panel-body {
+			padding: 0 }
+		#location h3.panel-title {
+			background: transparent url("icons/home-1.png") left no-repeat;
+			padding-left: 24px;
+			background-size: contain }
+	</style>
+</head>
+<body>
+	<div class="well">
+		<h1>School District Locator - Concept</h1>
+		<p>Bitters tousled do put a bird on it, helvetica vegan lo-fi. Fugiat leggings small batch tattooed. Four loko YOLO slow-carb activated charcoal snackwave normcore put a bird on it. Bushwick gochujang messenger bag glossier echo park everyday carry organic narwhal.</p>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 col-md-push-7">
+				<div id="location" class="panel panel-default">
+				 	<div class="panel-heading"><h3 class="panel-title">Your Location</h3></div>
+				 	<div class="panel-body">
+						<address>
+				 			<p class="full"></p>
+				 			<p class="pos"></p>
+							<p class="schools"></p>
+							<p class="districts"></p>
+				 		</address>
+				 	</div>
+				</div>
+				<br>
+				<div id="education" class="panel panel-default">
+						<div class="panel-heading"><h3 class="panel-title">School Districts</h3></div>
+						<div class="panel-body">
+						</div>
+				</div>
+				<br>
+				<div id="legislation" class="panel panel-default">
+						<div class="panel-heading"><h3 class="panel-title">Legislative Districts</h3></div>
+						<div class="panel-body">
+						</div>
+				</div>
+			</div>
+			<div class="col-md-7 col-md-pull-5">
+				<div class="panel panel-default">
+				 	<div class="panel-heading">
+						<div id="searchform">
+							<input id="search"> <button class="btn btn-default btn-sm">Search</button>
+						</div>
+					</div>
+				 	<div class="panel-body">
+						<div id="gmap"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/districts.js"></script>
+	<script>
+		function initGeo() {
+			$('#searchform>button').click(function() {
+				var a = document.getElementById('search').value;
+				if (a && a !== '') locate(a);
+			});
+			if ('geolocation' in navigator) {
+				navigator.geolocation.getCurrentPosition(successcb, errorcb, {maximumAge:600000});
+			}
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=[inser-your-google-api-key-here]&callback=initGeo"></script>
+	<script src="js/geo.js"></script>
+</body>
+</html>
