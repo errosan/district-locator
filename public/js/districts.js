@@ -10,6 +10,7 @@ var eCount = 0,
         lat:0,
         lon:0
       },
+      
       schooldistricts:[],
       legislativedistricts:[],
       reset: function() {
